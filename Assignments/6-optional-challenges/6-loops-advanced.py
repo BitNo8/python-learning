@@ -49,6 +49,39 @@ print(max_num([50, -10, 0, 75, 20]))
 
 #-------------------------------------------------------------------------------
 
-# 4.
+# 4. Same Values: In this challenge, we need to find the indices in two equally sized lists where the numbers match. We will be iterating through both of them at the same time and comparing the values, if the numbers are equal, then we record the index.
 
-# 5.
+#Write your function here
+def same_values(lst1, lst2):
+  new_lst = []
+  for i in range(len(lst1)):
+    if lst1[i] == lst2[i]:
+      new_lst.append(i)
+  return new_lst
+
+#Uncomment the line below when your function is done
+print(same_values([5, 1, -10, 3, 3], [5, 10, -10, 3, 5]))
+
+#-------------------------------------------------------------------------------
+
+# 5. Reversed List: For the final challenge, we are going to test two lists to see if the second list is the reverse of the first list. There are a few different ways to approach this, but we are going to try a method that iterates through each of the values in one direction for the first list and compares them against the values starting from the other direction in the second list.
+
+#Write your function here
+def reversed_list(lst1, lst2):
+  for index in range(len(lst1)):
+    if lst1[index] != lst2[len(lst2) - 1 - index]:
+      return False
+  return True
+
+# Alternate Answer:
+#def reversed_list(lst1, lst2):
+#for i in range(len(lst1)):
+#if lst1[i] == lst2[-1 - i]:
+#    continue
+#else:
+#    return False
+#return True
+
+#Uncomment the lines below when your function is done
+print(reversed_list([1, 2, 3], [3, 2, 1]))
+print(reversed_list([1, 5, 3], [3, 2, 1]))
