@@ -49,3 +49,20 @@ def odd_indices(lst):
 
 #Uncomment the line below when your function is done
 print(odd_indices([4, 3, 7, 10, 11, -2]))
+
+#-------------------------------------------------------------------------------
+
+# 5. Exponents(Nested Loops): In this challenge, we will be using nested loops in order to raise a list of numbers to the power of a list of other numbers. What this means is that for every number in the first list, we will raise that number to the power of every number in the second list. If you provide the first list with 2 elements and the second list with 3 numbers, then there will be 6 final answers.
+
+#Write your function here
+def exponents(bases, powers):
+  powered = []
+
+  for base in bases:
+    for power in powers:
+      powered.append(base ** power)
+
+  return powered
+
+#Uncomment the line below when your function is done
+print(exponents([2, 3, 4], [1, 2, 3]))
